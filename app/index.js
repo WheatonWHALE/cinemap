@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
      	output += data });
      python.on('close', function(code){ 
        if (code !== 0) {  return res.send(500, "OH NO! -- Error code: " + code); }
-       return res.send(200, output)
+       return res.json(200, JSON.parse(output));
      });
 });
 
