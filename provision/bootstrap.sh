@@ -23,7 +23,9 @@ apt_packages_to_install=(
     git
     mongodb-10gen
     nodejs
+    libzmq-dev
 )
+
 
 # Launchpad nodejs key C7917B12
 gpg -q --keyserver keyserver.ubuntu.com --recv-key C7917B12
@@ -48,12 +50,15 @@ apt-get update --assume-yes
 
 echo "Installing packages"
 apt-get install --assume-yes ${apt_packages_to_install[@]}
-
 apt-get clean
 
 echo "Restarting mongo"
 mkdir -p /data/db
 service mongodb restart
 
-sudo chown -R vagrant ~/.npm
-npm install -g nodemon
+
+
+
+
+
+
