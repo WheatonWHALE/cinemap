@@ -6,6 +6,7 @@ npm_packages_to_install=(
 
 pip_packages_to_install=(
     zerorpc
+    pymongo
 )
 
 echo "NPM Installs"
