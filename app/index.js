@@ -1,18 +1,18 @@
-var express = require('express'),
-    zerorpc = require("zerorpc"),
-    app = express();
+var restify = require('restify'),
+    zerorpc = require("zerorpc");
 
 var client = new zerorpc.Client();
 client.connect("tcp://127.0.0.1:4242");
 
-app.use("/", express.static(__dirname+"/public"));
+function respond(req, res, next) {
+  res.send('hello ' + req.params.name);
+  next();
+}
 
-app.get('/', function (req, res) {
-    client.invoke("hello", function(error, pyres, more) {
-        res.json(200, JSON.parse(pyres));
-    });
-});
+var server = restify.createServer();
+server.get('/hello/:name', respond);
+server.head('/hello/:name', respond);
 
-var server = app.listen(5000, function() {
-    console.log('Listening on port %d', server.address().port);
+server.listen(5000, function() {
+  console.log('%s listening at %s', server.name, server.url);
 });

@@ -24,6 +24,7 @@ apt_packages_to_install=(
     mongodb-10gen
     nodejs
     libzmq-dev
+    python-pip
 )
 
 
