@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 
 var ShowingSchema = new Schema({
 	showtime: Date,
-	venue_id: Schema.ObjectId,
-	feature_id: Schema.ObjectId
+	venue_id: {type: mongoose.Schema.Types.ObjectId, ref: 'Venue'},
+	feature_id: {type: mongoose.Schema.Types.ObjectId, ref: 'Feature'},
 });
 
-module.exports = mongoose.model('showing', ShowingSchema);
+module.exports = mongoose.model('Showing', ShowingSchema);
