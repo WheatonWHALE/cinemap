@@ -2,7 +2,7 @@
 var movieName = 			[
 							'Neighbors', 
 							'Godzilla', 
-							'X-Men: Dyas of Future Past', 
+							'X-Men: Days of Future Past', 
 							'Million Dollar Arm', 
 							'The Amazing Spider-Man 2', 
 							'Godzilla 3D', 
@@ -293,12 +293,6 @@ var VenueSchema = new Schema({
 		zip: Number
 	},
 external: String
-});
-
-var ShowingSchema = new Schema({
-showtime: Date,
-venue_id: {type: mongoose.Schema.Types.ObjectId, ref: 'Venue'},
-feature_id: {type: mongoose.Schema.Types.ObjectId, ref: 'Feature'}
 });
 
 var FeatureSchema = new Schema({
