@@ -309,9 +309,22 @@ var FeatureSchema = new Schema({
 var theater = mongoose.model('theater', VenueSchema);
 var movie = mongoose.model('movie', FeatureSchema);
 
-for ( var i = 0; i < movieName.length; i++ ){	
+for ( var i = 0; i < 16; i++ ){	
+
 	console.log(movieName[i]);
 	var current_Movie = movieName[i];
+	
+	var feature = new movie({title : current_Movie});
+
+	feature.save(function (err) {
+		console.log(err);
+	});
+};
+
+for ( var Y = 0; Y < 16; Y++ ){	
+
+	console.log(movieName[Y]);
+	var current_Movie = movieName[Y];
 	
 	var feature = new movie({title : current_Movie});
 
