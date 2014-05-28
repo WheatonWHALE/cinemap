@@ -309,42 +309,22 @@ var FeatureSchema = new Schema({
 var theater = mongoose.model('theater', VenueSchema);
 var movie = mongoose.model('movie', FeatureSchema);
 
-for ( var i = 0; i < 16; i++ ){	
+var movieList = [];
 
-	console.log(movieName[i]);
-	var current_Movie = movieName[i];
-	
-	var feature = new movie({title : current_Movie});
-
-	feature.save(function (err) {
-		console.log(err);
-	});
+for ( var i = 0; i < movieName.length; i++ ){
+    movieList.push({title: movieName[i], external: "N/A"});
 };
 
-for ( var Y = 0; Y < 16; Y++ ){	
+movie.create(movieList, function(err) {}); 
 
-	console.log(movieName[Y]);
-	var current_Movie = movieName[Y];
-	
-	var feature = new movie({title : current_Movie});
-
-	feature.save(function (err) {
-		console.log(err);
-	});
-};
+var TheaterArray = []
 
 for (var x = 0; x < TheaterAddress.length; x++){
 		var current_Theater = TheaterAddress[x];
-		var venue = new theater({name : current_Theater.name, address: {street : current_Theater.address[0], city : current_Theater.address[1], state : current_Theater.address[2]}});
-		
-		venue.save(function (err) {
-			console.log(venue.name); // please work!!!
-		});
+		TheaterArray.push({name : current_Theater.name, address: {street : current_Theater.address[0], city : current_Theater.address[1], state : current_Theater.address[2]}});
 };
 
-// for (var y = 0; y < TheaterList.length; y++ ){
-
-// };
+theater.create(TheaterArray, function(err) {});
 
  mongoose.disconnect();
 
