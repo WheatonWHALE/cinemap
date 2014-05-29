@@ -38,7 +38,7 @@ Venue.findOne({name: show.venue}, "_id", function (err, venue) {
 	Feature.findOne({title: show.title}, "_id", function (err, feature) {
 		console.log(venue);
 		console.log(feature);
-		Showing.create({showtime: show.data, venue_id: venue._id, feature_id: feature._id}, function(err) {});
+		Showing.create({showtime: show.date, venue_id: venue._id, feature_id: feature._id}, function(err) {});
 	});
 });
 
