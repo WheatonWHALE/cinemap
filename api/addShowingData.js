@@ -1,207 +1,218 @@
-var NeighborsTheaters = 	[
-							{title: 'Neighbors', theater: 'Sharon Cinemas 8', times: ['4:35'‎ , '7:15pm'‎]}, 
-							{title: 'Neighbors', theater: 'Showcase Cinema de Lux Patriot Place', times: ['‎2:30' , '3:55‎' , ‎'4:55‎' , ‎'6:35‎' , ‎'7:45‎' , ‎'9:20‎', ‎'10:20pm‎']}, 
-							{title: 'Neighbors', theater: 'Showcase Cinemas North Attleboro', times: [ ‎'2:50‎' , ‎'5:15‎'  ‎'7:40‎' , ‎'10:15pm‎']}, 
-							{title: 'Neighbors', theater: 'Regal Silver City Galleria 10', times: ['1:35‎' , ‎'4:35‎' , ‎'7:30‎' , ‎'9:55pm‎']}, 
-							{title: 'Neighbors', theater: 'Regal Swansea Stadium 12', times: ['1:50‎' , ‎'4:50‎' , ‎'7:50‎' , ‎'10:40pm‎']}, 
-							{title: 'Neighbors', theater: 'Showcase Cinemas Seekonk Route 6', times: [‎'2:25‎' , ‎'4:50‎' , ‎'7:25‎' , ‎'9:55pm‎']}
-							]
+var showListings =  [
+							{title: 'Neighbors', theater: 'Sharon Cinemas 8', hour: [16, 19], minute: [35, 15] }, 
+							{title: 'Neighbors', theater: 'Showcase Cinema de Lux Patriot Place', hour: [14, 15, 16,‎ 18, 19, 21, 22],  minute: [30, 55‎, 55,‎ 35‎, 45‎, 20‎, 20]}, 
+							{title: 'Neighbors', theater: 'Showcase Cinemas North Attleboro', hour: [ ‎14, 17,‎ 19, 22],  minute: [50, 15, 40, 15]}, 
+							{title: 'Neighbors', theater: 'Regal Silver City Galleria 10', hour: [13, 16,‎ 19, 21],  minute: [35, 35, 30, 55]}, 
+							{title: 'Neighbors', theater: 'Regal Swansea Stadium 12', hour: [13:, 16:, 19:, 22],  minute: [50, 50, 50, 40]}, 
+							{title: 'Neighbors', theater: 'Showcase Cinemas Seekonk Route 6', hour: [‎14, 16,‎ 19, ‎21],  minute: [25, 50, 25, 55]},
+							
 
-var GodzillaTheaters = 		[
-							{title: 'Godzilla', theater: 'Sharon Cinemas 8', times: ['4:15‎' , ‎'6:50pm‎']}, 
-							{title: 'Godzilla', theater: 'Showcase Cinema de Lux Patriot Place', times: ['1:00‎' , ‎'1:30‎' , ‎'3:50‎' , ‎'4:20‎' , ‎'6:40‎' , ‎'7:10‎' , ‎'9:35‎' , ‎'10:00pm‎']}, 
-							{title: 'Godzilla', theater: 'Showcase Cinemas North Attleboro', times: ['1:00‎' , ‎'1:30‎' , ‎'3:50‎' , ‎'4:20‎' , ‎'6:40‎' , ‎'7:10‎' , ‎'9:35‎' , ‎'10:00pm‎']}, 
-							{title: 'Godzilla', theater: 'Regal Silver City Galleria 10', times: ['1:30‎' , ‎'4:25‎' , ‎'7:40‎' , ‎'10:30pm‎']}, 
-							{title: 'Godzilla', theater: 'Regal Swansea Stadium 12', times: ['1:00‎' , ‎'1:15‎' , ‎'4:00‎' , ‎'7:10‎' , ‎'7:25‎' , ‎'10:20pm‎']}, 
-							{title: 'Godzilla', theater: 'Showcase Cinemas Seekonk Route 6', times: ['1:15‎' , ‎'1:45‎' , ‎'4:15‎'  ‎'4:45‎' , ‎'7:15‎' , ‎'7:45‎' , ‎'10:20pm‎']}
-                   			]
+		
+							{title: 'Godzilla', theater: 'Sharon Cinemas 8', hour: [16, ‎18], minute: [15, 50]}, 
+							{title: 'Godzilla', theater: 'Showcase Cinema de Lux Patriot Place', hour: [13, ‎13, ‎15, ‎16, ‎18, ‎19, ‎21, ‎22], minute: [0, 30, 50, 20, 40, 10, 35, 0]}, 
+							{title: 'Godzilla', theater: 'Showcase Cinemas North Attleboro', hour: [13, ‎13, ‎15, ‎16, ‎18, ‎19, ‎21, ‎22], minute: [0, 30, 50, 20, 40, 10, 35, 0]}, 
+							{title: 'Godzilla', theater: 'Regal Silver City Galleria 10', hour: [13, ‎16, ‎19, ‎22], minute: [30, 25, 40, 30]}, 
+							{title: 'Godzilla', theater: 'Regal Swansea Stadium 12', hour: [13, ‎13, ‎16, ‎19, ‎19, ‎22], minute: [0, 15, 0, 10, 25, 20]}, 
+							{title: 'Godzilla', theater: 'Showcase Cinemas Seekonk Route 6', hour: [13, ‎13, ‎16, ‎16, ‎19, ‎19, ‎22], minute: [15, 45, 15, 45, 15, 45, 20]},
+                   			
 
-var XMenTheaters = 			[
-							{title: 'X-Men: Days of Future Past', theater: 'Sharon Cinemas 8', times: [‎'10:00pm‎']}, 
-							{title: 'X-Men: Days of Future Past', theater: 'Showcase Cinema de Lux Patriot Place', times: ['10:15pm‎']}, 
-							{title: 'X-Men: Days of Future Past', theater: 'Regal Silver City Galleria 10', times: ['10:15pm‎']}, 
-							{title: 'X-Men: Days of Future Past', theater: 'Regal Swansea Stadium 12', times: ['10:00pm‎']}, 
-							{title: 'X-Men: Days of Future Past', theater: 'Showcase Cinema de Lux Randolph', times: ['10:15pm‎']}
-               				]
+		
+							{title: 'X-Men: Days of Future Past', theater: 'Sharon Cinemas 8', hour: [‎22]. minute: [0]}, 
+							{title: 'X-Men: Days of Future Past', theater: 'Showcase Cinema de Lux Patriot Place', hour: [22]. minute: [15]}, 
+							{title: 'X-Men: Days of Future Past', theater: 'Regal Silver City Galleria 10', hour: [22]. minute: [15]}, 
+							{title: 'X-Men: Days of Future Past', theater: 'Regal Swansea Stadium 12', hour: [22]. minute: [0]}, 
+							{title: 'X-Men: Days of Future Past', theater: 'Showcase Cinema de Lux Randolph', hour: [22]. minute: [15]},
+               				
 
-var MillionTheaters = 		[
-							{title: 'Million Dollar Arm', theater: 'Sharon Cinemas 8' times: [‎'4:00‎' , ‎'6:45pm‎']}, 
-							{title: 'Million Dollar Arm', theater: 'Showcase Cinema de Lux Patriot Place' times: ['12:35‎' , ‎'3:35‎' ,'6:55pm‎']}, 
-							{title: 'Million Dollar Arm', theater: 'Showcase Cinemas North Attleboro' times: ['1:00‎' , ‎'4:00‎' , ‎'7:00‎' , ‎'10:05pm‎']}, 
-							{title: 'Million Dollar Arm', theater: 'Regal Silver City Galleria 10' times: ['1:10‎' , ‎'4:10‎' , ‎'7:10‎' , ‎'10:00pm‎']}, 
-							{title: 'Million Dollar Arm', theater: 'Regal Swansea Stadium 12' times: [‎'1:35‎' , ‎'4:25‎' , ‎'7:15‎' , ‎'10:10pm‎']}, 
-							{title: 'Million Dollar Arm', theater: 'Showcase Cinemas Seekonk Route 6' times: ['12:30‎' , ‎'4:05‎' , ‎'7:10‎' , ‎'10:00pm‎']}
-				  			]
+	
+							{title: 'Million Dollar Arm', theater: 'Sharon Cinemas 8', hour: [‎16, ‎1], minute: [0, 45]}, 
+							{title: 'Million Dollar Arm', theater: 'Showcase Cinema de Lux Patriot Place', hour: [12, ‎15, 1], minute: [35, 35, 55]}, 
+							{title: 'Million Dollar Arm', theater: 'Showcase Cinemas North Attleboro', hour: [13, ‎16, ‎19, ‎2], minute: [0, 0, 0, 5]}, 
+							{title: 'Million Dollar Arm', theater: 'Regal Silver City Galleria 10', hour: [13, ‎16, ‎19, ‎2], minute: [10, 10, 10, 0]}, 
+							{title: 'Million Dollar Arm', theater: 'Regal Swansea Stadium 12', hour: [‎13, ‎16, ‎19, ‎2], minute: [35, 25, 15, 10]}, 
+							{title: 'Million Dollar Arm', theater: 'Showcase Cinemas Seekonk Route 6', hour: [12, ‎16, ‎19, ‎2], minute: [30, 5, 10, 0]},
+				  			
 
-var SpiderMan2Theaters = 	[
-				    		{title: 'The Amazing Spider-Man 2', theater: 'Sharon Cinemas 8', times: ['3:50‎' , ‎'6:40pm‎']}, 
-				    		{title: 'The Amazing Spider-Man 2', theater: 'Showcase Cinema de Lux Patriot Place', times: ['12:05‎' , ‎'12:40‎' , ‎'3:10‎' , ‎'3:45‎' , ‎'6:30‎' , ‎'9:40pm‎']}, 
-				    		{title: 'The Amazing Spider-Man 2', theater: 'Showcase Cinemas North Attleboro', times: ['1:10‎' , ‎'4:20‎' , ‎'6:30‎' , '7:35‎' , ‎'9:40pm']}, 
-				    		{title: 'The Amazing Spider-Man 2', theater: 'Regal Silver City Galleria 10', times: ['3:45‎' , ‎'7:05‎' , ‎'10:15pm‎']}, 
-				    		{title: 'The Amazing Spider-Man 2', theater: 'Regal Swansea Stadium 12', times: ['1:25‎' , ‎'4:10‎' , ‎'4:45‎' , ‎'8:00pm‎']}, 
-				    		{title: 'The Amazing Spider-Man 2', theater: 'Showcase Cinemas Seekonk Route 6', times: [‎'12:15‎' , ‎'3:20‎' , ‎'6:30‎' , ‎'9:45pm‎']}
-					 		]
+	
+				    		{title: 'The Amazing Spider-Man 2', theater: 'Sharon Cinemas 8', hour: [15, ‎18], minute: [50, 40]}, 
+				    		{title: 'The Amazing Spider-Man 2', theater: 'Showcase Cinema de Lux Patriot Place', hour: [12, ‎12, ‎15, ‎15, ‎18, ‎21], minute: [5, 40, 10, 45, 30, 40]}, 
+				    		{title: 'The Amazing Spider-Man 2', theater: 'Showcase Cinemas North Attleboro', hour: [13, ‎16, ‎18, 19, ‎2], minute: [10, 20, 30, 35, 40]}, 
+				    		{title: 'The Amazing Spider-Man 2', theater: 'Regal Silver City Galleria 10', hour: [15, ‎19, ‎22], minute: [45, 5, 15]}, 
+				    		{title: 'The Amazing Spider-Man 2', theater: 'Regal Swansea Stadium 12', hour: [13, ‎16, ‎16, ‎20], minute: [25, 10, 45, 0]}, 
+				    		{title: 'The Amazing Spider-Man 2', theater: 'Showcase Cinemas Seekonk Route 6', hour: [‎12, ‎15, ‎18, ‎21], minute: [15, 20, 30, 45]},
+					 		
 
-var Godzilla3DTheaters = 	[
-							{title: 'Godzilla 3D', theater: 'Showcase Cinema de Lux Patriot Place', times: ['11:15am‎' , ‎'12:30‎' , ‎'2:00‎' , ‎'3:20‎' , ‎'4:50‎' , ‎'6:10‎' , ‎'7:40‎' , ‎'9:05pm‎']}, 
-							{title: 'Godzilla 3D', theater: 'Showcase Cinemas North Attleboro', times: ['12:45‎' , ‎'3:45‎' , ‎'6:45‎' , ‎'9:50pm‎']}, 
-							{title: 'Godzilla 3D', theater: 'Regal Silver City Galleria 10', times: ['1:00‎' , '3:55‎' , ‎'7:20‎' , ‎'10:00pm‎']}, 
-							{title: 'Godzilla 3D', theater: 'Regal Swansea Stadium 12', times: ['1:45‎' , ‎'4:15‎' , ‎'4:40‎' , ‎'7:40‎' , ‎'10:05‎' , ‎'10:35pm‎']}, 
-							{title: 'Godzilla 3D', theater: 'Showcase Cinemas Seekonk Route 6', times:['12:45‎' , ‎'3:45‎' , ‎'6:45‎' , ‎'9:50pm‎']}, 
-							{title: 'Godzilla 3D', theater: 'Showcase Cinema de Lux Randolph', times: ['11:30am‎' , ‎'2:25‎' , ‎'5:10‎' , ‎'8:05pm‎']}
-					 		]
+	
+							{title: 'Godzilla 3D', theater: 'Showcase Cinema de Lux Patriot Place', hour: [11, ‎12, ‎14, ‎15, ‎16, ‎18, ‎19, ‎21], minute: [15, 30, 0, 20, 50, 10, 40, 5]}, 
+							{title: 'Godzilla 3D', theater: 'Showcase Cinemas North Attleboro', hour: [12, ‎15, ‎18, ‎21], minute: [45, 45, 45, 50]}, 
+							{title: 'Godzilla 3D', theater: 'Regal Silver City Galleria 10', hour: [13, 15, ‎19, ‎22], minute: [0, 55, 20, 0]}, 
+							{title: 'Godzilla 3D', theater: 'Regal Swansea Stadium 12', hour: [13, ‎16, ‎16, ‎19, ‎22, ‎22], minute: [45, 15, 40, 40, 5, 35]}, 
+							{title: 'Godzilla 3D', theater: 'Showcase Cinemas Seekonk Route 6', hour: [12, ‎15, ‎18, ‎21], minute: [45, 45, 45, 50]}, 
+							{title: 'Godzilla 3D', theater: 'Showcase Cinema de Lux Randolph', hour: [11, ‎14, ‎17, ‎20], minute: [30, 25, 10, 5]},
+					 		
 
-var BlendedTheaters =   	[
-				    		{title: 'Blended', theater: 'Sharon Cinemas 8', times: ['7:00pm‎']}, 
-				    		{title: 'Blended', theater: 'Showcase Cinema de Lux Patriot Place', times: ['7:00‎' , ‎'9:30pm‎']}, 
-				    		{title: 'Blended', theater: 'Showcase Cinemas North Attleboro', times: ['7:00pm‎']}, 
-				    		{title: 'Blended', theater: 'Regal Silver City Galleria 10', times: ['7:00‎' , ‎'9:30pm‎']}, 
-				    		{title: 'Blended', theater: 'Regal Swansea Stadium 12', times: ['7:00‎' , ‎'10:10pm‎']}, 
-				    		{title: 'Blended', theater: 'Showcase Cinemas Seekonk Route 6', times: ['7:00pm‎']}
-                    		]
+ 	
+				    		{title: 'Blended', theater: 'Sharon Cinemas 8', hour: [19], minute: [0]}, 
+				    		{title: 'Blended', theater: 'Showcase Cinema de Lux Patriot Place', hour: [19, ‎21], minute: [0, 30]}, 
+				    		{title: 'Blended', theater: 'Showcase Cinemas North Attleboro', hour: [19], minute: [0]}, 
+				    		{title: 'Blended', theater: 'Regal Silver City Galleria 10', hour: [19, ‎21], minute: [0, 30]}, 
+				    		{title: 'Blended', theater: 'Regal Swansea Stadium 12', hour: [19, ‎22], minute: [0, 10]}, 
+				    		{title: 'Blended', theater: 'Showcase Cinemas Seekonk Route 6', hour: [19], minute: [0]},
+                    		
 
-var XMen3DTheaters = 		[
-							{title: 'X-Men: Days of Future Past in 3D', theater: 'Showcase Cinema de Lux Patriot Place', times: ['10:00pm‎']}, 
-							{title: 'X-Men: Days of Future Past in 3D', theater: 'Regal Silver City Galleria 10', times: ['10:00pm‎']}, 
-							{title: 'X-Men: Days of Future Past in 3D', theater: 'Regal Swansea Stadium 12', times: ['10:20pm‎']}, 
-							{title: 'X-Men: Days of Future Past in 3D', theater: 'Showcase Cinema de Lux Randolph', times: [‎'10:00pm‎']}
-				 			]
+		
+							{title: 'X-Men: Days of Future Past in 3D', theater: 'Showcase Cinema de Lux Patriot Place', hour: [22], minute: [0]}, 
+							{title: 'X-Men: Days of Future Past in 3D', theater: 'Regal Silver City Galleria 10', hour: [22], minute: [0]}, 
+							{title: 'X-Men: Days of Future Past in 3D', theater: 'Regal Swansea Stadium 12', hour: [22], minute: [20]}, 
+							{title: 'X-Men: Days of Future Past in 3D', theater: 'Showcase Cinema de Lux Randolph', hour: [‎22], minute: [0]},
+				 			
 
-var TheOtherTheaters = 		[
-							{'Sharon Cinemas 8': [4:15‎  ‎7:10pm‎]}, 
-							{'Showcase Cinema de Lux Patriot Place': [1:15‎  ‎4:00‎  ‎7:00pm‎]}, 
-							{'Showcase Cinemas North Attleboro': [1:40‎  ‎4:35‎  ‎7:20‎  ‎9:55pm‎]}, 
-							{'Regal Silver City Galleria 10': [1:20‎  ‎4:15‎  ‎6:55‎  ‎9:40pm]}, 
-							{'Regal Swansea Stadium 12': [1:20‎  ‎4:20‎  ‎7:05‎  ‎9:50pm‎]}, 
-							{'Showcase Cinemas Seekonk Route 6': [12:50‎  ‎4:25‎  ‎7:20‎  ‎10:10pm‎]}
-				   			]
+		
+							{title: 'The Other Women', theater: 'Sharon Cinemas 8', hour: ['4:15‎', ‎'7:10pm‎'], minute: [15, 10]}, 
+							{title: 'The Other Women', theater: 'Showcase Cinema de Lux Patriot Place', hour: [13, ‎16, ‎19], minute: [15, 0, 0]}, 
+							{title: 'The Other Women', theater: 'Showcase Cinemas North Attleboro', hour: [13, ‎16, ‎19, ‎21], minute: [40, 35, 20, 55]}, 
+							{title: 'The Other Women', theater: 'Regal Silver City Galleria 10', hour: [13, ‎16, ‎18, ‎21], minute: [20, 15, 55, 40]}, 
+							{title: 'The Other Women', theater: 'Regal Swansea Stadium 12', hour: [13, ‎16, ‎19, ‎21], minute: [20, 20, 5, 50]}, 
+							{title: 'The Other Women', theater: 'Showcase Cinemas Seekonk Route 6', hour: [12, ‎16, ‎19, ‎22], minute: [50, 25, 20, 10]},
+				   			
 
-var HeavenTheaters = 		[
-							{'Showcase Cinemas North Attleboro': [‎1:30‎  ‎4:10‎  ‎7:10‎  ‎10:00pm‎]}, 
-							{'Regal Silver City Galleria 10': [‎1:10‎  ‎4:25‎  ‎6:45‎  ‎9:10pm‎]}, 
-							{'Regal Swansea Stadium 12': [1:30‎  ‎4:30‎  ‎7:00‎  ‎9:35pm]}, 
-							{'Showcase Cinemas Seekonk Route 6': [‎12:40‎  ‎4:10‎  ‎6:55‎  ‎9:40pm‎]}, 
-							{'Showcase Cinema de Lux Randolph': [‎11:35am‎  ‎2:00‎  ‎4:20‎  ‎6:50‎  ‎9:20pm‎]}
-				 			]
+		
+							{title: 'Heaven is for Real', theater: 'Showcase Cinemas North Attleboro', hour: [‎13, ‎16, ‎19, ‎22], minute: [30, 10, 10, 0]}, 
+							{title: 'Heaven is for Real', theater: 'Regal Silver City Galleria 10', hour: [‎13, ‎16, ‎18, ‎21], minute: [10, 25, 45, 10]}, 
+							{title: 'Heaven is for Real', theater: 'Regal Swansea Stadium 12', hour: [13, ‎16, ‎19, ‎21], minute: [30, 30, 0, 35]}, 
+							{title: 'Heaven is for Real', theater: 'Showcase Cinemas Seekonk Route 6', hour: [‎12, ‎16, ‎18, ‎21], minute: [40, 10, 55, 40]}, 
+							{title: 'Heaven is for Real', theater: 'Showcase Cinema de Lux Randolph', hour: [‎11, ‎14, ‎16, ‎18, ‎21], minute: [35, 0, 20, 50, 20]},
+				 			
 
-var Rio2Theaters = 			[
-				    		{'Sharon Cinemas 8': [4:25‎  ‎6:35pm‎]}, 
-				    		{'Showcase Cinema de Lux Patriot Place': [11:25am‎  ‎1:55‎  ‎4:25pm‎]}, 
-				    		{'Showcase Cinemas North Attleboro': [1:05‎  ‎3:50pm‎]},
-				    		{'Regal Silver City Galleria 10': [1:00‎  ‎3:30‎  ‎7:00pm‎]}, 
-				    		{'Regal Swansea Stadium 12': [1:05‎  ‎3:45‎  ‎6:45pm‎]}, 
-				    		{'Showcase Cinema de Lux Randolph': [12:55‎  ‎4:00pm‎]}
-               				]
+		
+				    		{title: 'Rio 2', theater: 'Sharon Cinemas 8', hour: [16, ‎18], minute: [25, 35]}, 
+				    		{title: 'Rio 2', theater: 'Showcase Cinema de Lux Patriot Place', hour: [11, ‎13, ‎16], minute: [25, 55, 25]}, 
+				    		{title: 'Rio 2', theater: 'Showcase Cinemas North Attleboro', hour: [13, ‎15], minute: [5, 50]},
+				    		{title: 'Rio 2', theater: 'Regal Silver City Galleria 10', hour: [13, ‎15, ‎19], minute: [0, 30, 0]}, 
+				    		{title: 'Rio 2', theater: 'Regal Swansea Stadium 12', hour: [13, ‎15, ‎18], minute: [5, 45, 45]}, 
+				    		{title: 'Rio 2', theater: 'Showcase Cinema de Lux Randolph', hour: [12, ‎16], minute: [55, 0]},
+               				
 
-var CaptainTheaters = 		[
-							{'Showcase Cinema de Lux Patriot Place': [‎12:00‎  ‎3:25‎  ‎6:45‎  ‎9:55pm‎]}, 
-							{'Showcase Cinemas North Attleboro': [7:05‎  ‎10:05pm‎]}, 
-							{' Regal Silver City Galleria 10': [1:05‎  ‎3:35‎  ‎6:50pm‎]}, 
-							{'Regal Swansea Stadium 12': [12:55‎  ‎4:05‎  ‎7:20‎  ‎10:30pm‎]}, 
-							{'Showcase Cinemas Seekonk Route 6': [‎10:05pm‎]}, 
-							{'Showcase Cinema de Lux Randolph': [12:40‎  ‎3:45‎  ‎9:55pm‎]}
-                  			]
+ 		
+							{title: 'Captain America: The Winter Soldier', theater: 'Showcase Cinema de Lux Patriot Place', hour: [‎12, 15, 18‎, 21], minute: [0, 25, 45, 55]}, 
+							{title: 'Captain America: The Winter Soldier', theater: 'Showcase Cinemas North Attleboro', hour: [19, ‎22], minute: [5, 5]}, 
+							{title: 'Captain America: The Winter Soldier', theater: ' Regal Silver City Galleria 10', hour: [13, ‎15, ‎18], minute: [5, 35, 50]}, 
+							{title: 'Captain America: The Winter Soldier', theater: 'Regal Swansea Stadium 12', hour: [12, ‎16, ‎19, ‎22], minute: [55, 5, 20, 30]}, 
+							{title: 'Captain America: The Winter Soldier', theater: 'Showcase Cinemas Seekonk Route 6', hour: [‎22], minute: [5]}, 
+							{title: 'Captain America: The Winter Soldier', theater: 'Showcase Cinema de Lux Randolph', hour: [12, ‎15, ‎21], minute: [40, 45, 55]},
+                  			
 
-var LegendsTheaters = 		[
-							{'Showcase Cinema de Lux Patriot Place': [11:55am‎  ‎2:15‎  ‎4:45pm‎]}, 
-							{'Showcase Cinemas North Attleboro': [12:15‎  ‎2:30‎  ‎4:40pm‎]}, 
-							{' Regal Silver City Galleria 10': [1:25‎  ‎4:30pm‎]}, 
-							{'Regal Swansea Stadium 12': [1:10‎  ‎3:30pm]}, 
-							{'Showcase Cinemas Seekonk Route 6': [12:10‎  ‎2:30‎  ‎4:55pm]}, 
-							{'Showcase Cinema de Lux Randolph': [12:20‎  ‎2:30‎  ‎4:45pm]}
-                  			]
+		
+							{title: 'Legends of Oz: Dorthys Return', theater: 'Showcase Cinema de Lux Patriot Place', hour: [11, ‎14, ‎16], minute: [55, 15, 45]}, 
+							{title: 'Legends of Oz: Dorthys Return', theater: 'Showcase Cinemas North Attleboro', hour: [12, ‎14, ‎16], minute: [15, 30, 40]}, 
+							{title: 'Legends of Oz: Dorthys Return', theater: ' Regal Silver City Galleria 10', hour: [13, ‎16], minute: [25, 30]}, 
+							{title: 'Legends of Oz: Dorthys Return', theater: 'Regal Swansea Stadium 12', hour: [13, ‎15], minute: [10, 30]}, 
+							{title: 'Legends of Oz: Dorthys Return', theater: 'Showcase Cinemas Seekonk Route 6', hour: [12, ‎14, ‎16], minute: [10, 30, 55]}, 
+							{title: 'Legends of Oz: Dorthys Return', theater: 'Showcase Cinema de Lux Randolph', hour: [12, ‎14, ‎16], minute: [20, 30, 45]},
+                  			
 
-var NightTheraters = 		[
-							{'Showcase Cinema de Lux Patriot Place': [‎1:45‎  ‎4:30‎  ‎7:15‎  ‎9:50pm‎]}, 
-							{'Showcase Cinema de Lux Randolph': [11:05am‎  ‎1:30‎  ‎4:05‎  ‎6:30‎  ‎9:10pm‎]}
-                 			]
+ 		
+							{title: 'Moms Night Out', theater: 'Showcase Cinema de Lux Patriot Place', hour: [‎13, ‎16, ‎19, ‎21], minute: [45, 30, 15, 50]}, 
+							{title: 'Moms Night Out', theater: 'Showcase Cinema de Lux Randolph', hour: [11, ‎13, ‎16, ‎18, ‎21], minute: [5, 30, 5, 30, 10]},
+                 			
 
-var SpiderMan3DTheaters = 	[
-							{'Showcase Cinema de Lux Patriot Place': [7:05‎  ‎10:10pm‎]}, 
-							{'Regal Silver City Galleria 10': [1:15pm‎]}, 
-							{'Regal Swansea Stadium 12': [‎12:50pm‎]}, 
-							{'Showcase Cinema de Lux Randolph': [7:10‎  ‎10:15pm‎]}
-                      		]
+ 	
+							{title: 'The Amazing Spider-Man 2 in 3D', theater: 'Showcase Cinema de Lux Patriot Place', hour: [19, ‎22], minute: [5, 10]},
+							{title: 'The Amazing Spider-Man 2 in 3D', theater: 'Regal Silver City Galleria 10', hour: [13], minute: [15]}, 
+							{title: 'The Amazing Spider-Man 2 in 3D', theater: 'Regal Swansea Stadium 12', hour: [‎12], minute: [50]}, 
+							{title: 'The Amazing Spider-Man 2 in 3D', theater: 'Showcase Cinema de Lux Randolph', hour: [19, ‎22], minute: [10, 15]},
+                      		
 
-var DivergentTheaters = 	[
-							{'Route One Cinema Pub': [‎8:05pm‎]}
-                    		]
+	
+							{title: 'Divergent', theater: 'Route One Cinema Pub', hour: [‎20], minute: [5]},
+                    		
 
-var TheGrandTheaters = 		[
-							{'Sharon Cinemas 8': [‎4:20pm‎]}, 
-							{'Showcase Cinemas North Attleboro': [12:50‎  ‎4:05‎  ‎6:55‎  ‎9:35pm‎]}, 
-							{'Showcase Cinemas Seekonk Route 6': [6:50‎  ‎9:30pm‎]}
-                   			]
+ 		
+							{title: 'The Grand Budapest Hotel', theater: 'Sharon Cinemas 8', hour: [‎'4:20pm‎'], minute: [20]}, 
+							{title: 'The Grand Budapest Hotel', theater: 'Showcase Cinemas North Attleboro', hour: [12, ‎16, ‎18, ‎21], minute: [50, 5, 55, 35]}, 
+							{title: 'The Grand Budapest Hotel', theater: 'Showcase Cinemas Seekonk Route 6', hour: [18, ‎21], minute: [50, 30]},
+                   			
 
-var GodzillaIMAXTheaters = 	[
-					    	{'Showcase Cinema de Lux Randolph': [‎12:35‎  ‎3:40‎  ‎6:35‎  ‎9:30pm‎]}
-                       		]
+	
+					    	{title: 'Godzilla: An IMAX 3D Experience', theater: 'Showcase Cinema de Lux Randolph', hour: [‎12, ‎15, ‎18, ‎21], minute: [35, 40, 35, 30]},
+                       		
 
-var LegoTheaters = 			[
-							{'East Providence 10': [12:25‎  ‎2:35‎  ‎4:45‎  ‎6:55‎  ‎9:05pm‎]}
-               				]
+			
+							{title: 'The Lego Movie', theater: 'East Providence 10', hour: [12, ‎14, ‎16, ‎18, ‎21], minute: [25, 35, 45, 55, 5]},
+               				
 
-var BrickTheaters = 		[
-							{'Route One Cinema Pub': [8:35pm‎]}, 
-							{'Showcase Cinema de Lux Randolph': [‎7:15pm‎]}
-                			]
+		
+							{title: 'Brick Mansions', theater: 'Route One Cinema Pub', hour: [20], minute: [35]}, 
+							{title: 'Brick Mansions', theater: 'Showcase Cinema de Lux Randolph', hour: [‎19], minute: [15]},
+                			
 
-var ShermanTheaters = 		[
-							{'East Providence 10': [12:10‎  ‎2:30‎  ‎4:40‎  ‎6:50‎  ‎8:55pm‎]}
-                  			]
+		
+							{title: 'Mr.Peabody & Sherman', theater: 'East Providence 10', hour: [12, ‎14, ‎16, ‎18, 20], minute:[10, 30, 40, 50, 55]},
+                  			
 
-var BearsTheaters = 		[
-               				{'Showcase Cinemas North Attleboro': [12:30‎  ‎2:40‎  ‎5:00pm‎]}
+		
+               				{title: 'Bears', theater: 'Showcase Cinemas North Attleboro', hour: [12, ‎14, ‎17], minute:[30, 40, 0]},
+               				
 
-               				]
+ 		
+							{title: 'Draft Day', theater: 'Route One Cinema Pub', hour: [18], minute: [0]}, 
+							{title: 'Draft Day', theater: 'Showcase Cinema de Lux Patriot Place', hour: [‎19, ‎22], minute: [25, 0]},
+               				
 
-var DraftTheaters = 		[
-							{'Route One Cinema Pub': [6:00pm‎]}, 
-							{'Showcase Cinema de Lux Patriot Place': [‎7:25‎  ‎10:00pm‎]}
-               				]
+			
+							{title: 'Noah', theater: 'Showcase Cinemas North Attleboro', hour: [22], minute: [15]},
+              				
 
-var NoahTheaters = 			[
-							{'Showcase Cinemas North Attleboro': [10:10pm‎]}
-              				]
+		
+							{title: 'Muppests Most Wanted', theater: 'Route One Cinema Pub', hour: [‎16], minute: [15]},
+                  			
 
-var MuppestsTheaters = 		[
-							{'Route One Cinema Pub': [‎4:15pm‎]}
-                  			]
 
-var TranscendenceTheaters = [
-					        {'Route One Cinema Pub': [6:25pm‎]}, 
-					        {'East Providence 10': [12:30‎  ‎3:00‎  ‎6:30‎  ‎9:10pm‎]}
-                       		]
+					        {title: 'Transcendence', theater: 'Route One Cinema Pub', hour: [18], minute: [25]}, 
+					        {title: 'Transcendence', theater: 'East Providence 10', hour: [12, ‎15, ‎18, ‎21], minute: [30, 0, 30, 10]},
+                       		
 
-var NonTheaters = 			[
-							{'East Providence 10': [12:15‎  ‎2:35‎  ‎4:55‎  ‎7:15‎  ‎9:35pm‎]}
-             				]
+			
+							{title: 'Non-Stop', theater: 'East Providence 10', hour: [12, ‎14, ‎16, 19, ‎21], minute: [15, 35, 55, 15, 35]},
+             				
 
-var RideTheaters = 			[
-							{'East Providence 10': [1:00‎  ‎3:10‎  ‎5:20‎  ‎7:25‎  ‎9:40pm‎]}
-              				]
+		
+							{title: 'Ride Along', theater: 'East Providence 10', hour: [13, ‎15, ‎17, ‎19, ‎21], minute: [0, 10, 20, 25, 40]},
+              				
+		
+							{title: 'Need for Speed', theater: 'East Providence 10', hour: [18, ‎21], minute: [20, 5]},
+              				
 
-var NeedTheaters = 			[
-							{'East Providence 10': [6:20‎  ‎9:05pm‎]}
-              				]
+		
+							{title: '300: Rise of an Empire', theater: 'East Providence 10', hour: [12, ‎14, ‎16, ‎18, ‎20], minute: [5, 15, 25, 35, 45]},
+               				
 
-var threeTheaters = 		[
-							{'East Providence 10': [12:05‎  ‎2:15‎  ‎4:25‎  ‎6:35‎  ‎8:45pm‎]}
-               				]
-
-var FrozenTheaters = 		[
-							{'East Providence 10': [‎12:40‎  ‎2:50‎  ‎5:05‎  ‎7:20‎  ‎9:30pm‎]}
-                			]
-
-var Theaters = 				[
-							'Sharon Cinemas 8', 'Showcase Cinema de Lux Patriot Place', 'Showcase Cinemas North Attleboro',
-							'Regal Silver City Galleria 10', 'Regal Swansea Stadium 12', 'Showcase Cinemas Seekonk Route 6',
-							'Route One Cinema Pub', 'East Providence 10', 'Showcase Cinema de Lux Randolph'
-							]
-
+		
+							{title: 'Frozen', theater: 'East Providence 10', hour: [‎12, ‎14, ‎17, ‎19, ‎21], minute: [40, 50, 5, 20, 30]}
+                		]	
+	
 var ShowingSchema = new Schema({
 showtime: Date,
 venue_id: {type: mongoose.Schema.Types.ObjectId, ref: 'theater'},
 feature_id: {type: mongoose.Schema.Types.ObjectId, ref: 'movie'}
 });
 
+var Showing = mongoose.model('Showing', ShowingSchema);
+
+//var ShowingArray = [];
+var Dates = []
+
+
+for (var i = 0; i < showListings.length; i++) {
+	for (var x = 0; x < showListings.hour.length; x++) {
+		theater.findOne({name: showListings[i].theater}, "_id", function (err, venue) {
+			movie.findOne({title: showListings[i].title}, "_id", function (err, feature) {
+				var foo = new Date(2014, 4, 22, showListings[i].hour[x], showListings[i].minute[x] );
+				Dates.push(foo);
+				console.log(venue);
+				console.log(feature);
+				Showing.create({showtime: Dates[i], venue_id: venue._id, feature_id: feature._id}, function(err) {});
+			});
+		});
+	};
+};
