@@ -1,7 +1,10 @@
 var showListings = 		[
 							{title: 'Neighbors', theater: 'Sharon Cinemas 8', hour: [16, 19], minute: [35, 15] },
 							{title: 'Neighbors', theater: 'Showcase Cinema de Lux Patriot Place', hour: [14, 15, 16, 18, 19, 21, 22], minute: [30, 55, 55, 35, 45, 20, 20] },
+							{title: 'Neighbors', theater: 'Regal Silver City Galleria 10', hour: [13, 16,‎ 19, 21],  minute: [35, 35, 30, 55] },
+
 							{title: 'Rio 2', theaters: 'Sharon Cinemas 8', hour: [16, 18], minute: [25, 35] }
+
 							// {title: 'Noah', theater: 'Showcase Cinemas North Attleboro', hour: [22, 22], minute: [15, 15]},
 							// {title: 'Frozen', theater: 'East Providence 10', hour: [12, 14, 17, 19, 21], minute: [40, 50, 5, 20, 30]}
                 		];	
@@ -53,7 +56,7 @@ function addOneShowing(showing) {
 			};
 			Feature.findOne({title: showing.title}, "_id", function (er, feature) {
 				if (er){
-					
+
 				};
 				console.log(err);
 				console.log(er)
