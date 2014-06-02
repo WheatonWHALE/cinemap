@@ -89,7 +89,3 @@ for (var x = 0; x < TheaterAddress.length; x++){
 };
 
 Venue.create(TheaterArray, function(err) {});
-
- mongoose.disconnect();
-
-//}
