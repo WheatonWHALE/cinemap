@@ -39,31 +39,41 @@ var Feature = mongoose.model('Feature', FeatureSchema);
 var Venue = mongoose.model('Venue', VenueSchema);
 var Showing = mongoose.model('Showing', ShowingSchema);
 
-var Dates = []
-
-
-for (var i = 0; i < showListings.length -1; i++) {
+for (var i = 0; i < showListings.length; i++) {
 	for (var x = 0; x < showListings[i].hour.length; x++) {
-		Venue.findOne({name: showListings[i].theater}, "_id", showListings, function (err, venue) {
-			Feature.findOne({title: showListings[i].title}, "_id", showListings, function (err, feature) {		
-				console.log(showListings[i].title);
+		addOneShowing(showListings[i]);
+	};
+};
+
+
+function addOneShowing(showing) {
+		Venue.findOne({name: showing.theater}, "_id", function (err, venue) {
+			if (err){
+
+			};
+			Feature.findOne({title: showing.title}, "_id", function (er, feature) {
+				if (er){
+					
+				};
+				console.log(err);
+				console.log(er)
+				console.log(showing);	
+				console.log(venue);
+				console.log(feature);
 				
-				var foo = new Date(2014, 4, 22, showListings[i].hour[x], showListings[i].minute[x]);
-				Dates.push(foo);
+				var foo = new Date(2014, 4, 22, showing.hour[x], showing.minute[x]);
 				
 				console.log(venue);
 				console.log(feature);
 				
-				var showtime = new Showing({showtime: Dates[i], venue_id: venue._id, feature_id: feature._id});
-				showtime.save(function(err) {
+				var showtimes = new Showing({showtime: foo, venue_id: venue._id, feature_id: feature._id});
+				showtimes.save(function(err) {
 					console.log(err);
 				})
 			
 			});
 		});	
-	};
 };
-console.log(Dates);
 
 // for (var e = 0; e < showListings.length; e++){
 // 	Venue.findOne({name: showListings[e].theater}, "_id", function (err, venue) {

@@ -47,39 +47,7 @@ var TheaterAddress = 		[
                     		{name: 'Showcase Cinema de Lux Randolph', address: ['73 Mazzeo Drive', 'Randolph', 'MA']} 
                     		]
 
-// var TheaterList = 			[
-// 							NeighborsTheaters, 
-// 							GodzillaTheaters,
-// 							XMenTheaters,
-// 							MillionTheaters,
-// 							SpiderMan2Theaters,
-// 							Godzilla3DTheaters,
-// 							BlendedTheaters,
-// 							XMen3DTheaters,
-// 							TheOtherTheaters,
-// 							HeavenTheaters, 
-// 							Rio2Theaters,
-// 							CaptainTheaters,
-// 							LegendsTheaters,
-// 							NightTheraters,
-// 							SpiderMan3DTheaters,
-// 							DivergentTheaters,
-// 							TheGrandTheaters,
-// 							GodzillaIMAXTheaters,
-// 							LegoTheaters,
-// 							BrickTheaters,
-// 							ShermanTheaters,
-// 							BearsTheaters,
-// 							DraftTheaters,
-// 							NoahTheaters,
-// 							MuppestsTheaters,
-// 							TranscendenceTheaters,
-// 							NonTheaters,
-// 							RideTheaters,
-// 							NeedTheaters,
-// 							threeTheaters,
-// 							FrozenTheaters
-// 							]
+
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
